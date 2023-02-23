@@ -1,0 +1,10 @@
+---
+- name: to install tree on managed nodes
+  hosts: all
+  tasks:
+    - name: install tree
+      apt:
+        name: tree
+        state: present
+        update_cache: yes
+...

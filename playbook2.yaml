@@ -1,0 +1,14 @@
+---
+- name: playbook to install java and maven on all managed nodes
+  hosts: all
+  tasks:
+    - name: to install java
+      apt:
+        name: default-jdk
+        state: present
+        update_cache: yes
+    - name: install maven
+      apt:
+        name: maven
+        state: present
+...
